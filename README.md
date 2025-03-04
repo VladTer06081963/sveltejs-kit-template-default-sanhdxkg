@@ -36,7 +36,7 @@ npm install --save-dev svelte-preprocess pug
 Конфигурация SvelteKit
 Настройте svelte.config.js для поддержки Pug:
 
-```
+```javascript
 
 import adapter from '@sveltejs/adapter-auto';
 import { sveltePreprocess } from 'svelte-preprocess';
@@ -52,15 +52,14 @@ const config = {
 };
 
 export default config;
+```
 
 🎯 Использование Pug
 1. Внутри .svelte файлов
 Вы можете использовать Pug внутри <template lang="pug">:
 
-svelte
-Copy
 
-
+```svelte javascript
 <script>
   let message = "Hello from Pug!";
 </script>
@@ -78,6 +77,8 @@ Copy
     font-size: 1.2em;
   }
 </style>
+```
+
 2. Внешние Pug файлы
 Вы можете импортировать Pug файлы как строки и вставлять их с помощью {@html}:
 
@@ -100,13 +101,16 @@ Copy
     font-size: 1.2em;
   }
 </style>
+```
+
 Пример template.pug:
 
-pug
-Copy
+```pug
 h1 Welcome to the Pug Page!
 p This page is rendered using an external Pug file.
 a(href="/") Go back to Home
+```
+
 🧩 Структура проекта
 Copy
 src/
